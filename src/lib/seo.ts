@@ -7,10 +7,10 @@ import { getSiteUrl } from "@/lib/site-url";
 export const siteTitle = "Stephen Seng — Senior Frontend Developer";
 
 export const siteDescription =
-  "Senior Frontend Developer based in Malaysia with 12+ years of experience building responsive websites, Vue / Nuxt interfaces, corporate websites, eCommerce UI, annual report websites, CMS-driven platforms, and production-ready frontend experiences.";
+  "Senior Frontend Developer based in Malaysia with 15+ years of experience building responsive websites, Vue / Nuxt interfaces, corporate websites, eCommerce UI, annual report websites, CMS-driven platforms, and production-ready frontend experiences.";
 
 export const twitterDescription =
-  "Senior Frontend Developer based in Malaysia with 12+ years of responsive UI, Vue / Nuxt, React / Next.js, eCommerce, and corporate website frontend experience.";
+  "Senior Frontend Developer based in Malaysia with 15+ years of responsive UI, Vue / Nuxt, React / Next.js, eCommerce, and corporate website frontend experience.";
 
 const ogImagePath = path.join(process.cwd(), "public", "og-image.png");
 

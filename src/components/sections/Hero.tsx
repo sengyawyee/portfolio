@@ -29,7 +29,7 @@ export default function Hero() {
               {siteConfig.subheadline}
             </p>
 
-            <div className="hero-cta-row mt-10 flex flex-row flex-wrap items-center gap-3 sm:gap-4">
+            <div className="hero-cta-row mt-10 flex flex-row flex-wrap items-center gap-3 sm:gap-4 xl:flex-nowrap">
               <HeroButton href="#work" variant="primary">
                 View Work
               </HeroButton>

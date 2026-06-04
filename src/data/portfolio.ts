@@ -11,7 +11,7 @@ export const siteConfig = {
   headline:
     "Senior Frontend Developer building responsive, production-ready web interfaces.",
   subheadline:
-    "I have 12+ years of frontend experience delivering corporate websites, eCommerce interfaces, annual report websites, and responsive public-facing web experiences using Vue, Nuxt, HTML, SCSS, Bootstrap, JavaScript, and modern frontend practices.",
+    "I have 15+ years of frontend experience delivering corporate websites, eCommerce interfaces, annual report websites, and responsive public-facing web experiences using Vue, Nuxt, HTML, SCSS, Bootstrap, JavaScript, and modern frontend practices.",
   trustLine:
     "Open to frontend developer roles focused on Vue / Nuxt, React / Next.js, responsive UI, and production frontend delivery.",
 };
@@ -37,14 +37,14 @@ export const deliveryPanel = {
     "Maintainable UI components",
   ],
   stats: [
-    { value: "12+", label: "Frontend experience" },
+    { value: "15+", label: "Frontend experience" },
     { value: "Vue / Nuxt", label: "Current focus" },
     { value: "Public-facing", label: "Corporate websites" },
   ],
 };
 
 export const aboutQuickFacts = [
-  "12+ years frontend experience",
+  "15+ years frontend experience",
   "Vue / Nuxt / Responsive UI",
   "Corporate & public-facing websites",
 ];
@@ -225,7 +225,7 @@ export const earlierProjects = [
 ];
 
 export const experienceSection = {
-  title: "12+ years of frontend delivery experience",
+  title: "15+ years of frontend delivery experience",
   description:
     "Production frontend experience across enterprise eCommerce, corporate websites, CMS platforms, and public-facing digital projects.",
 };
@@ -292,7 +292,7 @@ export const credentials = [
 ];
 
 export const aboutParagraphs = [
-  "I'm Stephen Seng, a Malaysia-based senior frontend developer with 12+ years of experience building responsive websites, eCommerce interfaces, corporate websites, annual report websites, and CMS-driven frontend experiences.",
+  "I'm Stephen Seng, a Malaysia-based senior frontend developer with 15+ years of experience building responsive websites, eCommerce interfaces, corporate websites, annual report websites, and CMS-driven frontend experiences.",
   "Today, I'm focused on modern frontend development with Vue 3, Nuxt, React, Next.js, TypeScript, Figma-to-code workflow, responsive UI, and maintainable frontend delivery.",
 ];
 

@@ -440,7 +440,20 @@ button:focus-visible {
   }
 }
 
-/* Tablet — hero CTAs wrap without horizontal overflow (desktop xl+ unchanged) */
+/* Desktop — keep all three hero CTAs on one row */
+@media (min-width: 1280px) {
+  .hero-cta-row {
+    flex-wrap: nowrap;
+  }
+
+  .hero-cta-row .hero-glow-btn {
+    min-width: 0;
+    flex: 0 0 auto;
+    padding-inline: 1.75rem;
+  }
+}
+
+/* Tablet — hero CTAs wrap without horizontal overflow */
 @media (max-width: 1279px) {
   .hero-cta-row .hero-glow-btn {
     min-width: 0;
