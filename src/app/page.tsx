@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import StructuredData from "@/components/seo/StructuredData";
 import About from "@/components/sections/About";
 import Capabilities from "@/components/sections/Capabilities";
@@ -26,6 +27,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
