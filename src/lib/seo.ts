@@ -7,7 +7,7 @@ import { getSiteUrl } from "@/lib/site-url";
 export const siteTitle = "Stephen Seng — Senior Frontend Developer";
 
 export const siteDescription =
-  "Senior Frontend Developer based in Malaysia with 15+ years of experience building responsive websites, Vue / Nuxt interfaces, corporate websites, eCommerce UI, annual report websites, CMS-driven platforms, and production-ready frontend experiences.";
+  "Senior Frontend Developer in Malaysia with 15+ years of experience building responsive, high-quality websites and digital interfaces using Vue, Nuxt, React, Next.js, JavaScript, and modern frontend technologies.";
 
 export const twitterDescription =
   "Senior Frontend Developer based in Malaysia with 15+ years of responsive UI, Vue / Nuxt, React / Next.js, eCommerce, and corporate website frontend experience.";
