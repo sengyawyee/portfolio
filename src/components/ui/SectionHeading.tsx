@@ -1,5 +1,8 @@
+import SectionEyebrow, { type SectionEyebrowIcon } from "@/components/ui/SectionEyebrow";
+
 interface SectionHeadingProps {
   eyebrow?: string;
+  eyebrowIcon?: SectionEyebrowIcon;
   title: string;
   description?: string;
   align?: "left" | "center";
@@ -10,6 +13,7 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({
   eyebrow,
+  eyebrowIcon,
   title,
   description,
   align = "left",
@@ -29,11 +33,13 @@ export default function SectionHeading({
       id={anchorId}
       className={`flex max-w-3xl flex-col gap-3 sm:gap-4 ${alignment}`}
     >
-      {eyebrow && (
+      {eyebrow && eyebrowIcon ? (
+        <SectionEyebrow label={eyebrow} icon={eyebrowIcon} />
+      ) : eyebrow ? (
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">
           {eyebrow}
         </p>
-      )}
+      ) : null}
       <h2
         className={`font-bold tracking-tight ${titleSize} ${
           dark ? "text-white" : "text-navy"
@@ -43,7 +49,7 @@ export default function SectionHeading({
       </h2>
       {description && (
         <p
-          className={`max-w-2xl text-base leading-relaxed sm:text-lg sm:leading-8 ${
+          className={`max-w-2xl text-sm leading-relaxed sm:text-base sm:leading-8 lg:text-lg ${
             dark ? "text-muted-dark" : "text-muted"
           }`}
         >

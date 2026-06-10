@@ -8,6 +8,8 @@ interface ProjectCardProps {
   category: string;
   description: string;
   skills: string[];
+  status?: string;
+  bullets?: string[];
   url?: string;
   image?: string;
   featured?: boolean;
@@ -17,10 +19,10 @@ interface ProjectCardProps {
 }
 
 const imageHeights: Record<ProjectCardSize, string> = {
-  large: "h-52 sm:h-56",
-  default: "h-48 sm:h-52",
-  small: "h-36 sm:h-40",
-  compact: "h-40",
+  large: "h-[17.55rem] sm:h-[18.9rem] lg:h-56",
+  default: "h-[16.2rem] sm:h-[17.55rem] lg:h-52",
+  small: "h-[12.15rem] sm:h-[13.5rem] lg:h-40",
+  compact: "h-[13.5rem] lg:h-40",
 };
 
 export default function ProjectCard({
@@ -28,6 +30,8 @@ export default function ProjectCard({
   category,
   description,
   skills,
+  status,
+  bullets,
   url,
   image,
   featured = false,
@@ -101,11 +105,18 @@ export default function ProjectCard({
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
             {category}
           </p>
-          {featured && (
-            <span className="shrink-0 rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">
-              Featured
-            </span>
-          )}
+          <div className="flex shrink-0 flex-wrap items-center justify-end gap-2">
+            {status ? (
+              <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-muted">
+                {status}
+              </span>
+            ) : null}
+            {featured ? (
+              <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">
+                Featured
+              </span>
+            ) : null}
+          </div>
         </div>
 
         <div className="space-y-2">
@@ -149,7 +160,7 @@ export default function ProjectCard({
         <p
           className={`shrink-0 leading-relaxed text-muted ${
             resolvedSize === "large"
-              ? "text-base sm:text-lg sm:leading-relaxed"
+              ? "text-sm sm:text-base lg:text-lg sm:leading-relaxed"
               : isSmall
                 ? "line-clamp-3 text-sm leading-relaxed"
                 : "text-sm sm:text-base"
@@ -157,6 +168,20 @@ export default function ProjectCard({
         >
           {description}
         </p>
+
+        {bullets && bullets.length > 0 ? (
+          <ul className="shrink-0 space-y-2 text-sm leading-relaxed text-muted">
+            {bullets.map((bullet) => (
+              <li key={bullet} className="flex gap-2.5">
+                <span
+                  className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent"
+                  aria-hidden="true"
+                />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         <ul className="flex shrink-0 flex-wrap gap-2 pt-0.5">
           {skills.map((skill) => (

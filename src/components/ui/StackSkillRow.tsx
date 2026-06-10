@@ -10,31 +10,27 @@ export default function StackSkillRow({
   muted = [],
 }: StackSkillRowProps) {
   return (
-    <p className="text-[0.9375rem] leading-relaxed sm:text-base">
-      {skills.map((skill, index) => {
+    <ul className="flex flex-wrap gap-2">
+      {skills.map((skill) => {
         const isFeatured = featured.includes(skill);
         const isMuted = muted.includes(skill);
+
         return (
-          <span key={skill}>
-            {index > 0 && (
-              <span className="text-muted/50" aria-hidden="true">
-                {" · "}
-              </span>
-            )}
+          <li key={skill}>
             <span
-              className={
+              className={`inline-flex items-center rounded-md border px-3 py-1.5 text-sm font-medium leading-none ${
                 isFeatured
-                  ? "font-semibold text-accent"
+                  ? "border-indigo-300/70 bg-indigo-50 font-semibold text-indigo-700"
                   : isMuted
-                    ? "text-muted"
-                    : "font-medium text-navy"
-              }
+                    ? "border-slate-200 bg-slate-50 text-muted"
+                    : "border-slate-200 bg-white text-navy"
+              }`}
             >
               {skill}
             </span>
-          </span>
+          </li>
         );
       })}
-    </p>
+    </ul>
   );
 }

@@ -41,13 +41,13 @@ export default function ExperienceItem({
       </header>
 
       <div className="border-l-[3px] border-l-indigo-400/80 px-4 py-5 sm:px-5 lg:px-6 lg:py-6">
-        <p className="text-base font-bold text-accent lg:text-[1.0625rem]">
+        <p className="text-sm font-bold text-accent sm:text-base lg:text-[1.0625rem]">
           {role}
         </p>
         <h3 className="mt-2 text-[1.75rem] font-extrabold leading-tight tracking-tight text-navy sm:text-[2rem] lg:text-[2.25rem]">
           {company}
         </h3>
-        <p className="mt-3.5 max-w-3xl text-base leading-relaxed text-muted sm:leading-8">
+        <p className="mt-3.5 max-w-3xl text-sm leading-relaxed text-muted sm:text-base sm:leading-8">
           {description}
         </p>
         <div className="mt-4 border-t border-indigo-50 pt-4 lg:mt-5 lg:pt-5">

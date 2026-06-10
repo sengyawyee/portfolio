@@ -1,3 +1,4 @@
+import SectionEyebrow from "@/components/ui/SectionEyebrow";
 import PanelMeta from "@/components/ui/delivery/PanelMeta";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionShell from "@/components/ui/SectionShell";
@@ -15,13 +16,11 @@ export default function Experience() {
     <SectionShell className="section-surface-tint">
       <ScrollReveal variant="fade-up">
         <div id="experience" className="max-w-3xl lg:max-w-none">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-indigo-600">
-            Experience
-          </p>
+          <SectionEyebrow label="Experience" icon="experience" tone="indigo" />
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             {experienceSection.title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg sm:leading-8">
+          <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base sm:leading-8 lg:text-lg">
             {experienceSection.description}
           </p>
         </div>

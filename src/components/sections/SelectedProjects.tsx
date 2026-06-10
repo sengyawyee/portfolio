@@ -15,7 +15,7 @@ function SubsectionTitle({
     <div>
       <h3 className="text-xl font-bold text-navy sm:text-2xl">{title}</h3>
       {description ? (
-        <p className="mt-2 max-w-2xl text-base text-muted">{description}</p>
+        <p className="mt-2 max-w-2xl text-sm text-muted sm:text-base">{description}</p>
       ) : null}
     </div>
   );
@@ -36,6 +36,7 @@ export default function SelectedProjects() {
         <SectionHeading
           anchorId="work"
           eyebrow="Portfolio"
+          eyebrowIcon="portfolio"
           title="Selected frontend projects"
           description="Recent work across Vue / Nuxt, corporate websites, education platforms, and public-facing experiences."
         />
@@ -58,6 +59,8 @@ export default function SelectedProjects() {
                 category={project.category}
                 description={project.description}
                 skills={project.skills}
+                status={project.status}
+                bullets={project.bullets}
                 url={"url" in project ? project.url : undefined}
                 image={project.image}
                 featured={Boolean(project.featured)}
@@ -86,6 +89,8 @@ export default function SelectedProjects() {
                 category={project.category}
                 description={project.description}
                 skills={project.skills}
+                status={project.status}
+                bullets={project.bullets}
                 url={"url" in project ? project.url : undefined}
                 image={project.image}
                 size="small"
@@ -112,6 +117,8 @@ export default function SelectedProjects() {
                 category={project.category}
                 description={project.description}
                 skills={project.skills}
+                status={project.status}
+                bullets={project.bullets}
                 image={"image" in project ? project.image : undefined}
                 compact
               />

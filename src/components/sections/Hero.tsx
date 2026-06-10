@@ -25,7 +25,7 @@ export default function Hero() {
               {siteConfig.headline}
             </h1>
 
-            <p className="mt-7 text-lg leading-relaxed text-muted-dark sm:text-xl sm:leading-8">
+            <p className="mt-7 text-sm leading-relaxed text-muted-dark sm:text-xl sm:leading-8">
               {siteConfig.subheadline}
             </p>
 

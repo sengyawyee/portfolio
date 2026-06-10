@@ -1,3 +1,4 @@
+import SectionEyebrow from "@/components/ui/SectionEyebrow";
 import AboutPortrait from "@/components/ui/AboutPortrait";
 import CredentialVerificationPanel from "@/components/ui/CredentialVerificationPanel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -14,13 +15,11 @@ export default function About() {
     <SectionShell className="section-surface-base about-section-spacing">
       <ScrollReveal variant="fade-up">
         <div id="about" className="max-w-3xl lg:max-w-none">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-accent">
-            About
-          </p>
+          <SectionEyebrow label="About" icon="about" />
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             About Stephen
           </h2>
-          <p className="mt-4 text-base text-muted sm:text-lg">
+          <p className="mt-4 text-sm text-muted sm:text-base lg:text-lg">
             Senior frontend developer based in Malaysia
           </p>
         </div>
@@ -45,7 +44,7 @@ export default function About() {
                 <h3 className="text-[1.75rem] font-bold tracking-tight text-navy lg:text-[1.85rem]">
                   {siteConfig.name}
                 </h3>
-                <p className="mt-3.5 text-base font-semibold text-accent">
+                <p className="mt-3.5 text-sm font-semibold text-accent sm:text-base">
                   {siteConfig.title}
                 </p>
                 <p className="mt-3 text-sm font-medium text-muted lg:text-base">
@@ -72,7 +71,7 @@ export default function About() {
 
         <div className="about-content-col min-w-0">
           <ScrollReveal variant="fade-up">
-            <div className="flex flex-col gap-5 text-base leading-relaxed text-muted sm:text-lg sm:leading-8">
+            <div className="flex flex-col gap-5 text-sm leading-relaxed text-muted sm:text-base sm:leading-8 lg:text-lg">
               {aboutParagraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -81,7 +80,7 @@ export default function About() {
 
           <ScrollReveal variant="fade-up" delay={120}>
             <blockquote className="mt-8 rounded-2xl border border-border border-l-4 border-l-accent bg-card px-6 py-6 shadow-sm sm:px-7 lg:px-8">
-              <p className="text-base font-semibold leading-relaxed text-navy sm:text-lg">
+              <p className="text-sm font-semibold leading-relaxed text-navy sm:text-base lg:text-lg">
                 {aboutHighlight}
               </p>
             </blockquote>

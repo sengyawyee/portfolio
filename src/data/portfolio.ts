@@ -18,30 +18,9 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Work", href: "#work" },
-  { label: "Capabilities", href: "#capabilities" },
   { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },
 ];
-
-export const deliveryPanel = {
-  title: "Frontend Delivery Stack",
-  subtitle: "Vue 3 · Nuxt · Responsive UI · Figma to Code",
-  capabilities: [
-    "Vue 3 / Nuxt frontend",
-    "Responsive UI implementation",
-    "Figma-to-code workflow",
-    "Corporate website delivery",
-    "Annual report frontend",
-    "HTML / SCSS / Bootstrap / JavaScript",
-    "Cross-browser compatibility",
-    "Maintainable UI components",
-  ],
-  stats: [
-    { value: "15+", label: "Frontend experience" },
-    { value: "Vue / Nuxt", label: "Current focus" },
-    { value: "Public-facing", label: "Corporate websites" },
-  ],
-};
 
 export const aboutQuickFacts = [
   "15+ years frontend experience",
@@ -49,115 +28,175 @@ export const aboutQuickFacts = [
   "Corporate & public-facing websites",
 ];
 
-export const techStackCards = [
+export type SkillGroup = {
+  title: string;
+  skills: string[];
+  featured?: string[];
+  muted?: string[];
+};
+
+export const skillGroups: SkillGroup[] = [
   {
-    title: "Frameworks",
-    skills: ["Vue 3", "Nuxt", "React", "Next.js"],
-    featured: ["Vue 3", "Nuxt"],
-    muted: [] as string[],
-  },
-  {
-    title: "Core Frontend",
+    title: "Frontend Engineering",
     skills: ["HTML5", "CSS3", "SCSS", "JavaScript", "TypeScript"],
     featured: [],
     muted: [],
   },
   {
-    title: "UI & Styling",
-    skills: ["Tailwind CSS", "Bootstrap 5.3", "Responsive Web Design"],
+    title: "Frameworks",
+    skills: ["Vue 3", "Nuxt", "React", "Next.js"],
+    featured: ["Vue 3", "Nuxt"],
+    muted: [],
+  },
+  {
+    title: "UI & Responsive",
+    skills: [
+      "Tailwind CSS",
+      "Bootstrap 5.3",
+      "Responsive Web Design",
+      "Figma-to-code",
+    ],
+    featured: [],
+    muted: [],
+  },
+  {
+    title: "CMS & Ecommerce",
+    skills: ["WordPress", "CMS websites", "Adobe Commerce / Magento"],
     featured: [],
     muted: [],
   },
   {
     title: "Workflow",
-    skills: ["Git", "Figma-to-code", "Cross-browser testing", "Component-based UI"],
+    skills: ["Git", "Cross-browser testing", "Component-based UI"],
     featured: [],
     muted: [],
   },
   {
-    title: "Platforms",
-    skills: ["WordPress", "CMS websites", "Adobe Commerce / Magento"],
-    featured: [],
-    muted: ["Adobe Commerce / Magento"],
+    title: "AI-Assisted Workflow",
+    skills: [
+      "Cursor",
+      "ChatGPT",
+      "Codex",
+      "Claude Code",
+      "Agentic Coding",
+      "AI-Assisted Architecture",
+    ],
+    featured: ["Agentic Coding", "AI-Assisted Architecture"],
+    muted: [],
   },
 ];
 
-export const deliveryStatement =
-  "I focus on frontend work that survives real production use: responsive layouts, clean implementation, reusable structure, and UI details that stay consistent across pages and devices.";
+export type AgenticWorkflowStep = {
+  title: string;
+  description: string;
+};
 
-export const capabilities = [
-  {
-    title: "Vue / Nuxt Frontend",
-    description:
-      "Responsive Vue 3 and Nuxt interfaces with clean page structure and reusable UI patterns.",
-    status: "production-ready",
-  },
-  {
-    title: "Figma-to-Code Execution",
-    description:
-      "Accurate translation of design into frontend with attention to spacing, typography, and alignment.",
-    status: "reviewed",
-  },
-  {
-    title: "Responsive UI Implementation",
-    description:
-      "Layouts built for desktop, tablet, and mobile behavior instead of only static screenshots.",
-    status: "responsive",
-  },
-  {
-    title: "Corporate & Public-Facing Websites",
-    description:
-      "Experience delivering polished websites for corporate, education, foundation, financial, and public-facing brands.",
-    status: "reviewed",
-  },
-  {
-    title: "HTML / SCSS / Bootstrap / JavaScript",
-    description:
-      "Strong production experience with practical frontend technologies used in real client projects.",
-    status: "maintainable",
-  },
-  {
-    title: "Frontend Quality & Maintenance",
-    description:
-      "Clean structure, consistent styling, reusable components, and frontend work teams can maintain.",
-    status: "production-ready",
-  },
-] as const;
+export const agenticWorkflowIntro = {
+  eyebrow: "MODERN FRONTEND PRACTICE",
+  heading: "Agentic Frontend Workflow",
+  intro:
+    "I use structured AI-assisted workflows to turn complex requirements into focused frontend tasks, accelerate implementation, and strengthen code review, testing, and delivery.",
+};
 
-export const frontendApproachItems = [
+export const agenticWorkflowSupportingLine =
+  "AI accelerates execution. I remain responsible for architecture, code quality, testing, and final delivery.";
+
+export type AgenticCaseStudy = {
+  eyebrow: string;
+  title: string;
+  status: string;
+  description: string;
+  bullets: string[];
+  tags: string[];
+  image: string;
+};
+
+export const foliaCaseStudy: AgenticCaseStudy = {
+  eyebrow: "APPLIED IN PRACTICE",
+  title: "Folia AI",
+  status: "In Development",
+  description:
+    "A trust-first document intelligence platform where I apply structured AI-assisted engineering across frontend architecture, implementation, review, and runtime validation.",
+  bullets: [
+    "Built a responsive Smart Inbox for reviewing AI-drafted document information before confirmation.",
+    "Used Vue, Nuxt, TypeScript, and Zod to maintain clear contracts across frontend and application boundaries.",
+    "Applied source-backed review, human confirmation, and evidence-based QA to prevent uncertain information from becoming trusted facts.",
+  ],
+  tags: [
+    "Vue 3",
+    "Nuxt",
+    "TypeScript",
+    "Zod",
+    "Supabase",
+    "AI-Assisted Engineering",
+  ],
+  image: "/projects/folia-ai-img.png",
+};
+
+export const agenticWorkflowSteps: AgenticWorkflowStep[] = [
   {
-    title: "Responsive by default",
+    title: "Understand",
     description:
-      "I plan layouts for real device behavior, not only desktop screenshots.",
+      "Clarify the user need, design intent, scope, and delivery constraints.",
   },
   {
-    title: "Component consistency",
+    title: "Structure",
     description:
-      "I keep UI patterns, spacing, states, and interactions consistent across pages.",
+      "Define components, states, interfaces, and acceptance criteria.",
   },
   {
-    title: "Maintainable structure",
+    title: "Build",
     description:
-      "I prefer reusable UI patterns and page structures that are easier for teams to extend.",
+      "Use focused AI-assisted coding for bounded implementation tasks.",
   },
   {
-    title: "Production mindset",
+    title: "Verify",
     description:
-      "I consider browser compatibility, content structure, performance, and real delivery needs.",
+      "Review the code and test responsiveness, types, builds, and browser behaviour.",
   },
   {
-    title: "Cross-browser reliability",
+    title: "Deliver",
     description:
-      "I check real browser behavior, responsive states, and content edge cases before delivery.",
-  },
-  {
-    title: "User experience polish",
-    description:
-      "I care about readable content, clear hierarchy, smooth navigation, and interaction details.",
+      "Ship maintainable frontend work that is ready for real users.",
   },
 ];
 
-export const recentProjects = [
+export type AgenticPrinciple = {
+  title: string;
+  description: string;
+};
+
+export const agenticPrinciples: AgenticPrinciple[] = [
+  {
+    title: "Frontend Judgment",
+    description:
+      "Production experience guides what to reuse, simplify, refactor, or reject.",
+  },
+  {
+    title: "Human Review",
+    description:
+      "Generated code is inspected for correctness, accessibility, maintainability, and fit.",
+  },
+  {
+    title: "Runtime Evidence",
+    description:
+      "The browser, build, type checks, and user flow decide whether the work is complete.",
+  },
+];
+
+export type PortfolioProject = {
+  title: string;
+  category: string;
+  description: string;
+  skills: string[];
+  image?: string;
+  url?: string;
+  featured?: boolean;
+  status?: string;
+  bullets?: string[];
+};
+
+export const recentProjects: PortfolioProject[] = [
   {
     title: "THP Foundation",
     url: "https://thpfoundation.com",
@@ -197,7 +236,7 @@ export const recentProjects = [
   },
 ];
 
-export const earlierProjects = [
+export const earlierProjects: PortfolioProject[] = [
   {
     title: "ASEAN GEMS",
     category: "Frontend Project",
@@ -213,14 +252,6 @@ export const earlierProjects = [
       "Frontend implementation for a hospitality and travel-related digital experience.",
     skills: ["Hospitality", "UI Implementation"],
     image: "/projects/plaza-premium.png",
-  },
-  {
-    title: "Folia AI",
-    category: "Personal SaaS Product UI",
-    description:
-      "Product UI exploration for Smart Inbox and AI document review workflow.",
-    skills: ["SaaS UI", "Product UX"],
-    image: "/projects/folia-ai.png",
   },
 ];
 

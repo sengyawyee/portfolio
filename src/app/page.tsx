@@ -3,13 +3,12 @@ import Header from "@/components/layout/Header";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import StructuredData from "@/components/seo/StructuredData";
 import About from "@/components/sections/About";
-import Capabilities from "@/components/sections/Capabilities";
+import AgenticWorkflowSection from "@/components/sections/AgenticWorkflowSection";
 import Contact from "@/components/sections/Contact";
 import Experience from "@/components/sections/Experience";
-import FrontendApproach from "@/components/sections/FrontendApproach";
 import Hero from "@/components/sections/Hero";
 import SelectedProjects from "@/components/sections/SelectedProjects";
-import TechStack from "@/components/sections/TechStack";
+import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
@@ -19,9 +18,8 @@ export default function Home() {
       <main>
         <Hero />
         <SelectedProjects />
-        <Capabilities />
-        <FrontendApproach />
-        <TechStack />
+        <AgenticWorkflowSection />
+        <Skills />
         <Experience />
         <About />
         <Contact />

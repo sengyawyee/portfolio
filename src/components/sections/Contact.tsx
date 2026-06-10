@@ -20,7 +20,7 @@ export default function Contact() {
           <h2 className="mt-4 max-w-2xl text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
             Open to Senior Frontend Developer opportunities
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-dark sm:text-lg sm:leading-8">
+          <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-dark sm:text-base sm:leading-8 lg:text-lg">
             I&apos;m interested in frontend roles where I can contribute to
             responsive UI development, Vue / Nuxt projects, React / Next.js
             interfaces, corporate websites, CMS-driven platforms, and production
@@ -31,27 +31,27 @@ export default function Contact() {
         <div className="grid gap-10 p-6 sm:gap-12 sm:p-10 xl:grid-cols-[1fr_1.05fr] xl:items-start xl:gap-16 xl:p-12 xl:pt-12">
           <div className="min-w-0">
             <p className="text-sm font-semibold text-navy">Get in touch</p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ScrollReveal variant="fade-up" delay={0} className="w-full sm:w-auto">
-                <ContactCTA variant="primary" className="w-full sm:w-auto">
+            <div className="mt-6 flex flex-col gap-3 lg:flex-row lg:flex-nowrap lg:items-center">
+              <ScrollReveal variant="fade-up" delay={0} className="w-full lg:w-auto lg:shrink-0">
+                <ContactCTA variant="primary" className="w-full lg:w-auto">
                   Email Me
                 </ContactCTA>
               </ScrollReveal>
-              <ScrollReveal variant="fade-up" delay={90} className="w-full sm:w-auto">
+              <ScrollReveal variant="fade-up" delay={90} className="w-full lg:w-auto lg:shrink-0">
                 <ContactCTA
-                  variant="secondary"
+                  variant="outlined"
                   href={siteConfig.linkedin}
-                  className="w-full sm:w-auto"
+                  className="w-full lg:w-auto"
                 >
                   LinkedIn
                 </ContactCTA>
               </ScrollReveal>
-              <ScrollReveal variant="fade-up" delay={180} className="w-full sm:w-auto">
+              <ScrollReveal variant="fade-up" delay={180} className="w-full lg:w-auto lg:shrink-0">
                 <ContactCTA
                   href={siteConfig.cvUrl}
-                  variant="secondary"
+                  variant="ghost"
                   download
-                  className="w-full sm:w-auto"
+                  className="w-full lg:w-auto"
                 >
                   Download CV
                 </ContactCTA>
