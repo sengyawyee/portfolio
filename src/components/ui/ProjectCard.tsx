@@ -1,4 +1,7 @@
 import Image from "next/image";
+import ProjectViewLink, {
+  type ProjectViewLocation,
+} from "@/components/ui/ProjectViewLink";
 import SkillChip from "@/components/ui/SkillChip";
 
 type ProjectCardSize = "large" | "default" | "small" | "compact";
@@ -16,6 +19,7 @@ interface ProjectCardProps {
   compact?: boolean;
   size?: ProjectCardSize;
   fillHeight?: boolean;
+  analyticsLocation?: ProjectViewLocation;
 }
 
 const imageHeights: Record<ProjectCardSize, string> = {
@@ -38,6 +42,7 @@ export default function ProjectCard({
   compact = false,
   size,
   fillHeight = false,
+  analyticsLocation,
 }: ProjectCardProps) {
   const resolvedSize: ProjectCardSize = compact
     ? "compact"
@@ -132,7 +137,14 @@ export default function ProjectCard({
             {title}
           </h3>
 
-          {url && (
+          {url && analyticsLocation ? (
+            <ProjectViewLink
+              url={url}
+              title={title}
+              category={category}
+              location={analyticsLocation}
+            />
+          ) : url ? (
             <a
               href={url}
               target="_blank"
@@ -154,7 +166,7 @@ export default function ProjectCard({
                 />
               </svg>
             </a>
-          )}
+          ) : null}
         </div>
 
         <p

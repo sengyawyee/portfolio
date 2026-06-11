@@ -66,6 +66,7 @@ export default function SelectedProjects() {
                 featured={Boolean(project.featured)}
                 size="large"
                 fillHeight
+                analyticsLocation="featured_projects"
               />
             </div>
           ))}
@@ -94,6 +95,7 @@ export default function SelectedProjects() {
                 url={"url" in project ? project.url : undefined}
                 image={project.image}
                 size="small"
+                analyticsLocation="more_selected_work"
               />
             </div>
           ))}
@@ -121,6 +123,7 @@ export default function SelectedProjects() {
                 bullets={project.bullets}
                 image={"image" in project ? project.image : undefined}
                 compact
+                analyticsLocation="earlier_frontend_experience"
               />
             </div>
           ))}

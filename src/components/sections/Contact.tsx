@@ -1,4 +1,4 @@
-import { ContactCTA } from "@/components/ui/ContactCTA";
+import ContactActions from "@/components/sections/ContactActions";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionShell from "@/components/ui/SectionShell";
 import { contactInterests, siteConfig } from "@/data/portfolio";
@@ -31,32 +31,7 @@ export default function Contact() {
         <div className="grid gap-10 p-6 sm:gap-12 sm:p-10 xl:grid-cols-[1fr_1.05fr] xl:items-start xl:gap-16 xl:p-12 xl:pt-12">
           <div className="min-w-0">
             <p className="text-sm font-semibold text-navy">Get in touch</p>
-            <div className="mt-6 flex flex-col gap-3 lg:flex-row lg:flex-nowrap lg:items-center">
-              <ScrollReveal variant="fade-up" delay={0} className="w-full lg:w-auto lg:shrink-0">
-                <ContactCTA variant="primary" className="w-full lg:w-auto">
-                  Email Me
-                </ContactCTA>
-              </ScrollReveal>
-              <ScrollReveal variant="fade-up" delay={90} className="w-full lg:w-auto lg:shrink-0">
-                <ContactCTA
-                  variant="outlined"
-                  href={siteConfig.linkedin}
-                  className="w-full lg:w-auto"
-                >
-                  LinkedIn
-                </ContactCTA>
-              </ScrollReveal>
-              <ScrollReveal variant="fade-up" delay={180} className="w-full lg:w-auto lg:shrink-0">
-                <ContactCTA
-                  href={siteConfig.cvUrl}
-                  variant="ghost"
-                  download
-                  className="w-full lg:w-auto"
-                >
-                  Download CV
-                </ContactCTA>
-              </ScrollReveal>
-            </div>
+            <ContactActions />
 
             <dl className="mt-11 flex flex-col gap-7 border-t border-border pt-9 lg:mt-12 lg:pt-10">
               <div>

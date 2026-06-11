@@ -1,5 +1,5 @@
+import type { MouseEventHandler, ReactNode } from "react";
 import { siteConfig } from "@/data/portfolio";
-import type { ReactNode } from "react";
 
 type ContactCTAVariant = "primary" | "outlined" | "ghost";
 
@@ -9,6 +9,7 @@ interface ContactCTAProps {
   download?: boolean;
   className?: string;
   children: ReactNode;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
 function EmailIcon({ className }: { className?: string }) {
@@ -89,6 +90,7 @@ export function ContactCTA({
   download = false,
   className = "",
   children,
+  onClick,
 }: ContactCTAProps) {
   const Icon = variantIcons[variant];
   const isExternal = href.startsWith("http");
@@ -97,6 +99,7 @@ export function ContactCTA({
     <a
       href={href}
       className={`inline-flex min-h-12 items-center justify-center gap-2.5 rounded-xl px-6 py-3 text-sm font-bold transition-colors duration-200 sm:min-h-[3.25rem] sm:px-7 sm:text-base ${variantStyles[variant]} ${className}`.trim()}
+      onClick={onClick}
       {...(download && { download: true })}
       {...(isExternal && {
         target: "_blank",
